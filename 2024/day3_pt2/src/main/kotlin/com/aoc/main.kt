@@ -26,9 +26,6 @@ fun extractFunctions(input: String): List<Pair<Int,Int>> {
             dontPosition = input.indexOf("don't()", doPosition)
             position = input.indexOf("mul(", doPosition)
             if (position < 0) return result
-            println("do:" +doPosition.toString())
-            println(dontPosition)
-            println(position)
         }
         endposition = input.indexOf(")",position)
         if (endposition > 0) {
@@ -39,9 +36,7 @@ fun extractFunctions(input: String): List<Pair<Int,Int>> {
             }
         }
 
-
         position = input.indexOf("mul(",position+1)
-        println("pos:" +position.toString())
     }
 
     return result
